@@ -14,9 +14,9 @@ function init() {
 
 	group = svg.append('g');
 
-	projection = d3.geo.albers()
-		.scale(7000)
-		.translate([-1200, -3100]);
+	projection = d3.geo.mercator()
+		.scale(8500)
+		.translate([12800, 1700]);
 
 	path = d3.geo.path()
 		.projection(projection);
