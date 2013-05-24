@@ -4,7 +4,7 @@
 
 GDAL_CRI_URL=http://gadm.org/data/shp/CRI_adm.zip
 GDAL_CRI_ZIP=build/CRI_adm.zip
-GDAL_CRI_SHP=build/CRI_adm0.shp
+GDAL_CRI_SHP=build/CRI_adm2.shp
 
 CRI_JSON=build/costarica.json
 CRI_TOPO_JSON=public/js/data/costarica-topo.json
@@ -22,7 +22,8 @@ ${GDAL_CRI_SHP}: ${GDAL_CRI_ZIP}
 	touch ${GDAL_CRI_SHP}
 
 ${CRI_JSON}: ${GDAL_CRI_SHP}
-	ogr2ogr -overwrite -f GeoJSON ${CRI_JSON} ${GDAL_CRI_SHP}
+	rm -f ${CRI_JSON}
+	ogr2ogr -f GeoJSON ${CRI_JSON} ${GDAL_CRI_SHP}
 
 ${CRI_TOPO_JSON}: node_modules ${CRI_JSON}
 	./node_modules/topojson/bin/topojson -p name=NAME -p name -q 1e4 -o ${CRI_TOPO_JSON} ${CRI_JSON}
