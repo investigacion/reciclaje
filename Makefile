@@ -9,12 +9,15 @@ GDAL_CRI_SHP=build/CRI_adm2.shp
 CRI_JSON=build/costarica.json
 CRI_TOPO_JSON=public/js/data/costarica-topo.json
 
-build: ${CRI_TOPO_JSON}
+map: ${CRI_TOPO_JSON}
+
+build:
+	mkdir build
 
 node_modules: package.json
 	npm install
 
-${GDAL_CRI_ZIP}:
+${GDAL_CRI_ZIP}: build
 	curl "${GDAL_CRI_URL}" --output ${GDAL_CRI_ZIP} --progress-bar --location
 
 ${GDAL_CRI_SHP}: ${GDAL_CRI_ZIP}
@@ -29,6 +32,6 @@ ${CRI_TOPO_JSON}: node_modules ${CRI_JSON}
 	./node_modules/topojson/bin/topojson -p name=NAME -p name -q 1e4 -o ${CRI_TOPO_JSON} ${CRI_JSON}
 
 clean:
-	rm -rf build/*.json build/*.shp build/*.shx ${CRI_TOPO_JSON}
+	rm -rf build ${CRI_TOPO_JSON}
 
-.PHONY: clean
+.PHONY: map clean
