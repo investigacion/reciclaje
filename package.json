@@ -1,0 +1,21 @@
+{
+	"name": "mentira",
+	"version": "0.0.1",
+	"description": "La gran mentira verde.",
+	"dependencies": {
+		"topojson": "1.x"
+	},
+	"devDependencies": {
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/nacion/mentira.git"
+	},
+	"contributors": [
+		{
+			"name": "Matthew Caruana Galizia",
+			"email": "m@m.cg"
+		}
+	]
+
+}
