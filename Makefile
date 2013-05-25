@@ -2,9 +2,9 @@
 # http://bost.ocks.org/mike/map/
 # Costa Rica shaded relief: http://bl.ocks.org/mjhoy/5301594
 
-GDAL_CRI_URL=http://gadm.org/data/shp/CRI_adm.zip
-GDAL_CRI_ZIP=build/CRI_adm.zip
-GDAL_CRI_SHP=build/CRI_adm/CRI_adm2.shp
+GADM_CRI_URL=http://gadm.org/data/shp/CRI_adm.zip
+GADM_CRI_ZIP=build/CRI_adm.zip
+GADM_CRI_SHP=build/CRI_adm/CRI_adm2.shp
 
 CRI_JSON=build/costarica.json
 CRI_TOPO_JSON=build/costarica-topo.json
@@ -22,16 +22,16 @@ public: ${MENTIRA_JS_PUB}
 node_modules: package.json
 	npm install
 
-${GDAL_CRI_ZIP}:
-	curl "${GDAL_CRI_URL}" --output ${GDAL_CRI_ZIP} --time-cond ${GDAL_CRI_ZIP} --progress-bar --location
+${GADM_CRI_ZIP}:
+	curl "${GADM_CRI_URL}" --output ${GADM_CRI_ZIP} --time-cond ${GADM_CRI_ZIP} --progress-bar --location
 
-${GDAL_CRI_SHP}: ${GDAL_CRI_ZIP}
-	unzip ${GDAL_CRI_ZIP} CRI_adm2.* -d build/CRI_adm
-	touch ${GDAL_CRI_SHP}
+${GADM_CRI_SHP}: ${GADM_CRI_ZIP}
+	unzip ${GADM_CRI_ZIP} CRI_adm2.* -d build/CRI_adm
+	touch ${GADM_CRI_SHP}
 
-${CRI_JSON}: ${GDAL_CRI_SHP}
+${CRI_JSON}: ${GADM_CRI_SHP}
 	rm -f ${CRI_JSON}
-	ogr2ogr -f GeoJSON ${CRI_JSON} ${GDAL_CRI_SHP}
+	ogr2ogr -f GeoJSON ${CRI_JSON} ${GADM_CRI_SHP}
 
 ${CRI_TOPO_JSON}: node_modules ${CRI_JSON}
 	@# Uses external properties file to munge in the official canton codes.
