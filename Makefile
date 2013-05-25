@@ -1,7 +1,3 @@
-# Examples:
-# http://bost.ocks.org/mike/map/
-# Costa Rica shaded relief: http://bl.ocks.org/mjhoy/5301594
-
 GADM_CRI_URL=http://gadm.org/data/shp/CRI_adm.zip
 GADM_CRI_ZIP=build/CRI_adm.zip
 GADM_CRI_SHP=build/CRI_adm/CRI_adm2.shp
