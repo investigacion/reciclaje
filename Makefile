@@ -11,7 +11,7 @@ CRI_TOPO_JSON=build/costarica-topo.json
 
 MENTIRA_JS_PUB=public/js/mentira.js
 
-# Run `make ENV=production` to build production assets.
+# Run `make ENV=live` to build production assets.
 # Otherwise dev is assumed.
 ifndef $ENV
 	ENV=dev
@@ -48,8 +48,8 @@ ${CRI_TOPO_JSON}: node_modules ${CRI_JSON}
 
 ${MENTIRA_JS_PUB}: ${CRI_TOPO_JSON} lib/js/*.js lib/js/controllers/*.js lib/js/vendor/*.js
 	./node_modules/browserify/bin/cmd.js lib/js/mentira.js --outfile ${MENTIRA_JS_PUB}.tmp --require ./lib/js/mentira.js
-	if [[ ${ENV} == "production" ]]; then \
-		./node_modules/uglify-js/bin/uglifyjs ${MENTIRA_JS_PUB} --compress --output ${MENTIRA_JS_PUB}.tmp; \
+	if [[ ${ENV} == "live" ]]; then \
+		./node_modules/uglify-js/bin/uglifyjs ${MENTIRA_JS_PUB}.tmp --compress --output ${MENTIRA_JS_PUB}.tmp; \
 	fi;
 	cat lib/js/vendor/*.js ${MENTIRA_JS_PUB}.tmp > ${MENTIRA_JS_PUB}
 	rm ${MENTIRA_JS_PUB}.tmp
