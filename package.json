@@ -3,9 +3,12 @@
 	"version": "0.0.1",
 	"description": "La gran mentira verde.",
 	"dependencies": {
-		"topojson": "1.x"
+		"topojson": "1.1.0",
+		"domready": "0.x"
 	},
 	"devDependencies": {
+		"browserify": "2.x",
+		"uglify-js": "2.x"
 	},
 	"repository": {
 		"type": "git",
