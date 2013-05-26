@@ -5,6 +5,7 @@ GADM_CRI_SHP=build/CRI_adm/CRI_adm2.shp
 CRI_JSON=build/costarica.json
 CRI_TOPO_JSON=build/costarica-topo.json
 
+CRI_GARBAGE_CSV=lib/data/costarica-garbage.csv
 CRI_GARBAGE_JSON=build/costarica-garbage.json
 
 MENTIRA_JS_PUB=public/js/mentira.js
@@ -44,7 +45,7 @@ ${CRI_TOPO_JSON}: node_modules ${CRI_JSON}
 		-o ${CRI_TOPO_JSON} \
 		${CRI_JSON}
 
-${CRI_GARBAGE_JSON}: lib/data/costarica-garbage.csv lib/scripts/garbage2json.js
+${CRI_GARBAGE_JSON}: ${CRI_GARBAGE_CSV} lib/scripts/garbage2json.js
 	node lib/scripts/garbage2json.js > ${CRI_GARBAGE_JSON}
 
 ${MENTIRA_JS_PUB}: ${CRI_TOPO_JSON} ${CRI_GARBAGE_JSON} lib/js/*.js lib/js/controllers/*.js lib/js/vendor/*.js
