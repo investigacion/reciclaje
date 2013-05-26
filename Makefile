@@ -5,6 +5,8 @@ GADM_CRI_SHP=build/CRI_adm/CRI_adm2.shp
 CRI_JSON=build/costarica.json
 CRI_TOPO_JSON=build/costarica-topo.json
 
+CRI_GARBAGE_JSON=build/costarica-garbage.json
+
 MENTIRA_JS_PUB=public/js/mentira.js
 
 # Run `make ENV=live` to build production assets.
@@ -42,7 +44,10 @@ ${CRI_TOPO_JSON}: node_modules ${CRI_JSON}
 		-o ${CRI_TOPO_JSON} \
 		${CRI_JSON}
 
-${MENTIRA_JS_PUB}: ${CRI_TOPO_JSON} lib/js/*.js lib/js/controllers/*.js lib/js/vendor/*.js
+${CRI_GARBAGE_JSON}: lib/data/costarica-garbage.csv lib/scripts/garbage2json.js
+	node lib/scripts/garbage2json.js > ${CRI_GARBAGE_JSON}
+
+${MENTIRA_JS_PUB}: ${CRI_TOPO_JSON} ${CRI_GARBAGE_JSON} lib/js/*.js lib/js/controllers/*.js lib/js/vendor/*.js
 	./node_modules/browserify/bin/cmd.js lib/js/mentira.js --outfile ${MENTIRA_JS_PUB}.tmp --require ./lib/js/mentira.js
 	if [[ ${ENV} == "live" ]]; then \
 		./node_modules/uglify-js/bin/uglifyjs ${MENTIRA_JS_PUB}.tmp --compress --output ${MENTIRA_JS_PUB}.tmp; \
@@ -51,7 +56,7 @@ ${MENTIRA_JS_PUB}: ${CRI_TOPO_JSON} lib/js/*.js lib/js/controllers/*.js lib/js/v
 	rm ${MENTIRA_JS_PUB}.tmp
 
 clean:
-	rm -rf build/CRI_adm ${CRI_JSON} ${CRI_TOPO_JSON} ${MENTIRA_JS_PUB}
+	rm -rf build/CRI_adm ${CRI_JSON} ${CRI_TOPO_JSON} ${CRI_GARBAGE_JSON} ${MENTIRA_JS_PUB}
 
 clean-vendor:
 	rm -rf node_modules

@@ -4,9 +4,8 @@
 	"description": "La gran mentira verde.",
 	"dependencies": {
 		"topojson": "1.x",
-		"domready": "0.x"
-	},
-	"devDependencies": {
+		"dsv": "0.x",
+		"domready": "0.x",
 		"browserify": "2.x",
 		"uglify-js": "2.x"
 	},
