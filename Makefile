@@ -73,7 +73,12 @@ ${MENTIRA_CSS_PUB}:
 	./node_modules/recess/bin/recess --compress lib/less/mentira.less > ${MENTIRA_CSS_PUB}
 
 clean:
-	rm -rf build/CRI_adm ${CRI_JSON} ${CRI_TOPO_JSON} ${CRI_GARBAGE_JSON} ${MENTIRA_JS_PUB}
+	rm -rf build/CRI_adm \
+		${CRI_JSON} \
+		${CRI_TOPO_JSON} \
+		${CRI_GARBAGE_JSON} \
+		${MENTIRA_JS_PUB} \
+		${MENTIRA_CSS_PUB}
 
 clean-vendor:
 	rm -rf node_modules
