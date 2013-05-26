@@ -33,7 +33,7 @@ ${CRI_TOPO_JSON}: node_modules ${CRI_JSON}
 	@# Uses external properties file to munge in the official canton codes.
 	@# https://github.com/mbostock/topojson/wiki/Command-Line-Reference#external-properties
 	./node_modules/topojson/bin/topojson \
-		-e build/costarica-codes.tsv \
+		-e lib/data/costarica-codes.csv \
 		--id-property=+ID_2 \
 		-p code=+code \
 		-p name=NAME_2 \
