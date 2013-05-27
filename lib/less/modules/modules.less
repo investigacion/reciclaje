@@ -1,0 +1,66 @@
+@import "visualization.less";
+
+.module {
+	padding: @moduleHeightPadding @pagePadding;
+}
+
+.module:first-of-type {
+	padding-top: @moduleHeightPadding + @barHeight;
+}
+
+.module h2,
+.module h3 {
+	text-transform: uppercase;
+}
+
+.module h3 {
+	color: #788942;
+	margin: 0.4em 0;
+}
+
+.module h2 {
+	width: 50%;
+	float: left;
+	font-size: 2rem;
+	padding-right: 1em;
+	.box-sizing(border-box);
+}
+
+.module h2::first-line {
+	color: #7d7d7d;
+}
+
+.module .blurb {
+	width: 50%;
+	float: right;
+	font-size: 0.85rem;
+	line-height: 1.4em;
+	color: #7d7d7d;
+}
+
+.module h2,
+.module .blurb {
+	margin: 0.2rem 0;
+}
+
+.module hr {
+	border: none;
+	height: 1px;
+	background-color: #ccc;
+}
+
+.module .nav {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 0.8rem;
+}
+
+.module .nav-item {
+	display: inline-block;
+	margin-right: 1em;
+	color: #7d7d7d;
+}
+
+.module .nav-item.selected {
+	color: inherit;
+}

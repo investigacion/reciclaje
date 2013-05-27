@@ -1,0 +1,68 @@
+#bar {
+	background-color: #788942;
+	padding: @barPadding @pagePadding;
+	height: @barHeight;
+	position: fixed;
+	width: 100%;
+	.box-sizing(border-box);
+	.box-shadow(0 0 5px 5px #ccc);
+}
+
+#bar-brand {
+	float: left;
+}
+
+#bar-logo-img {
+	height: 1.4rem;
+	padding-right: 0.2rem;
+}
+
+#bar-title {
+	display: inline-block;
+	margin: 0;
+	font-size: 0.7rem;
+	font-weight: normal;
+	font-family: serif;
+	text-transform: uppercase;
+	line-height: 0.9em;
+	border-left: 1px solid white;
+	color: white;
+	padding-left: 0.6rem;
+}
+
+#bar-menu {
+	font-size: 0.8rem;
+	line-height: 2.2rem;
+	text-transform: uppercase;
+	color: white;
+	float: right;
+}
+
+#bar-menu .nav {
+	display: inline-block;
+}
+
+#bar-menu .nav-item {
+	display: inline;
+	margin: 0 0.5rem;
+}
+
+#bar-social {
+	float: right;
+	margin-left: 1rem;
+}
+
+#bar-social iframe {
+	border: none;
+	overflow: hidden;
+	height: 21px;
+	margin-top: 0.3rem;
+}
+
+iframe.fb {
+	width: 90px;
+}
+
+iframe.tw {
+	width: 67px;
+}
