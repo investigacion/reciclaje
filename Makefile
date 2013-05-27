@@ -36,7 +36,7 @@ ${GADM_CRI_ZIP}: build
 	touch ${GADM_CRI_ZIP}
 
 ${GADM_CRI_SHP}: ${GADM_CRI_ZIP}
-	unzip ${GADM_CRI_ZIP} CRI_adm2.* -d build/CRI_adm
+	unzip -u ${GADM_CRI_ZIP} CRI_adm2.* -d build/CRI_adm
 	touch ${GADM_CRI_SHP}
 
 ${CRI_JSON}: ${GADM_CRI_SHP}
