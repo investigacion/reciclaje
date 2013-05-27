@@ -73,7 +73,7 @@ ${MENTIRA_JS_PUB}: ${CRI_TOPO_JSON} ${CRI_GARBAGE_JSON} lib/js/*.js lib/js/contr
 	cat lib/js/vendor/*.js ${MENTIRA_JS_PUB}.tmp > ${MENTIRA_JS_PUB}
 	rm ${MENTIRA_JS_PUB}.tmp
 
-${MENTIRA_CSS_PUB}:
+${MENTIRA_CSS_PUB}: lib/less/*.less lib/less/modules/*.less
 	if [ ! -d `dirname ${MENTIRA_CSS_PUB}` ]; then \
 		mkdir `dirname ${MENTIRA_CSS_PUB}`; \
 	fi;
