@@ -3,7 +3,8 @@
 	"version": "0.0.1",
 	"description": "La gran mentira verde.",
 	"dependencies": {
-		"domready": "0.x"
+		"domready": "0.x",
+		"css3-translate": "0.x"
 	},
 	"devDependencies": {
 		"recess": "1.x",

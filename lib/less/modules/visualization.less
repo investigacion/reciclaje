@@ -1,6 +1,6 @@
 .visualizations {
 	margin: 1rem 0;
-	height: 20rem;
+	height: 500px;
 	width: 100%;
 	position: relative;
 }
@@ -9,13 +9,28 @@
 	height: 100%;
 	width: 100%;
 	position: absolute;
+	.transition(transform, 0.5s);
 }
 
 #visualization-map {
 	background: rgba(255, 0, 0, 0.5);
+	.translate-x(0);
 }
 
 #visualization-graph {
 	background: rgba(0, 255, 0, 0.5);
 	.translate-x(100%);
+}
+
+#visualization-map-svg {
+	display: block;
+	margin: 0 auto;
+	height: 500px;
+	width: 510px;
+}
+
+@media (min-width: 800px) {
+	#visualization-map-svg {
+		margin-top: -4rem;
+	}
 }

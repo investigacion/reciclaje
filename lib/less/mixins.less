@@ -21,3 +21,29 @@
 	-o-transform: translateX(@x);
 	transform: translateX(@x);
 }
+
+.transition-duration(@duration) {
+	-webkit-transition-duration: @duration;
+	-moz-transition-duration: @duration;
+	-ms-transition-duration: @duration;
+	-o-transition-duration: @duration;
+	transition-duration: @duration;
+}
+
+.transition(@property, @duration) when (@property = transform) {
+	.transition-duration(@duration);
+	-webkit-transition-property: -webkit-transform;
+	-moz-transition-property: -moz-transform;
+	-ms-transition-property: -ms-tranform;
+	-o-transition-property: -o-transform;
+	transition-property: transform;
+}
+
+.transition(@property, @duration) {
+	.transition-duration(@duration);
+	-webkit-transition-property: @property;
+	-moz-transition-property: @property;
+	-ms-transition-property: @property;
+	-o-transition-property :@property;
+	transition-property: @property;
+}
