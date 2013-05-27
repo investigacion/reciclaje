@@ -30,11 +30,19 @@
 
 #visualization-map-svg .canton {
 	cursor: pointer;
+	stroke: white;
+	stroke-width: 1;
 }
 
 @media (min-width: 800px) {
+
+	/* Bleed into the title line on large screens. */
 	#visualization-map-svg {
 		margin-top: -4rem;
+	}
+
+	#visualization-map-svg .canton:hover {
+		opacity: 0.8;
 	}
 }
 
