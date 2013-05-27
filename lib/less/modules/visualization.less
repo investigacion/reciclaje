@@ -136,9 +136,11 @@
 	background: #d2d2d2;
 	font-family: serif;
 	font-size: 0.7rem;
-	padding: 0.2em 0.6em;
+	padding: 0 0.6rem;
 	margin: 0.6rem 0 0 0;
-	width: 8rem;
+	width: 10rem;
+	height: 1rem;
+	display: inline-block;
 	.box-sizing(border-box);
 
 	/* Hacks: */
@@ -148,13 +150,16 @@
 	.border-radius(0);
 }
 
-#viz-graph-select:after {
+#viz-graph-select-container:after {
 	content: '▾';
-	font-size: 0.7rem;
-	color: #d2d2d2;
-	background-color: black;
-	width: 2rem;
 	display: inline-block;
+	font-size: 0.7rem;
+	margin: 0.6rem 0 0 -1.2rem;
+	color: #d2d2d2;
+	background-color: #5d5d5d;
+	width: 1rem;
+	height: 1rem;
 	text-align: center;
+	pointer-events: none;
 	.box-sizing(border-box);
 }
