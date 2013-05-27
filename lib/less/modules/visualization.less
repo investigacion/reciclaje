@@ -1,34 +1,34 @@
-.visualizations {
+.vizs {
 	margin: 1rem 0;
 	height: 500px;
 	width: 100%;
 	position: relative;
 }
 
-.visualizations .visualization {
+.vizs .viz {
 	height: 100%;
 	width: 100%;
 	position: absolute;
 	.transition(transform, 0.5s);
 }
 
-#visualization-map {
+#viz-map {
 	.translate-x(0);
 }
 
-#visualization-graph {
+#viz-graph {
 	background: rgba(0, 255, 0, 0.5);
 	.translate-x(100%);
 }
 
-#visualization-map-svg {
+#viz-map-svg {
 	display: block;
 	margin: 0 auto;
 	height: 500px;
 	width: 510px;
 }
 
-#visualization-map-svg .canton {
+#viz-map-svg .canton {
 	cursor: pointer;
 	stroke: white;
 	stroke-width: 1;
@@ -37,16 +37,16 @@
 @media (min-width: 800px) {
 
 	/* Bleed into the title line on large screens. */
-	#visualization-map-svg {
+	#viz-map-svg {
 		margin-top: -4rem;
 	}
 
-	#visualization-map-svg .canton:hover {
+	#viz-map-svg .canton:hover {
 		opacity: 0.8;
 	}
 }
 
-#visualization-map-tip {
+#viz-map-tip {
 	width: 14rem;
 	position: absolute;
 	bottom: 1em;
@@ -56,11 +56,11 @@
 	.transition(transform, 0.25s);
 }
 
-#visualization-map-tip .close {
+#viz-map-tip .close {
 	cursor: pointer;
 }
 
-#visualization-map-tip .close:before {
+#viz-map-tip .close:before {
 	content: '×';
 	color: #6a7840;
 	background-color: white;
@@ -77,30 +77,30 @@
 	.box-shadow(0 0 3px 2px #999);
 }
 
-#visualization-map-tip .title {
+#viz-map-tip .title {
 	font-size: 1.2em;
 	text-align: center;
 	margin: 0;
 }
 
-#visualization-map-tip dl {
+#viz-map-tip dl {
 	font-family: serif;
 	margin: 0.2em 0 0 0;
 }
 
-#visualization-map-tip .title,
-#visualization-map-tip dd {
+#viz-map-tip .title,
+#viz-map-tip dd {
 	color: #6a7840;
 }
 
-#visualization-map-tip dt {
+#viz-map-tip dt {
 	display: inline-block;
 	width: 75%;
 	margin: 0.5em 5% 0 0;
 	color: #6e6e6e;
 }
 
-#visualization-map-tip dd {
+#viz-map-tip dd {
 	font-weight: bold;
 	font-size: 1.2em;
 	margin: 0;
@@ -109,7 +109,49 @@
 	text-align: left;
 }
 
-#visualization-map-tip dd:first-of-type {
+#viz-map-tip dd:first-of-type {
 	font-size: 1.6em;
 	color: black;
+}
+
+#viz-graph-menu .nav-item {
+	display: inline-block;
+	color: white;
+	font-size: 0.7rem;
+	background-color: #d0d1d0;
+	padding: 0.2em 0.6em;
+	min-width: 10rem;
+	.box-sizing(border-box);
+}
+
+#viz-graph-menu .nav-item.selected {
+	background-color: @brandBackground;
+}
+
+#viz-graph-select {
+	border: none;
+	background: #d2d2d2;
+	font-family: serif;
+	font-size: 0.7rem;
+	padding: 0.2em 0.6em;
+	margin: 0.6rem 0 0 0;
+	width: 8rem;
+	.box-sizing(border-box);
+
+	/* Hacks: */
+	-webkit-appearance: none;
+    -moz-appearance:none;
+    appearance:none;
+	.border-radius(0);
+}
+
+#viz-graph-select:after {
+	content: '▾';
+	font-size: 0.7rem;
+	color: #d2d2d2;
+	background-color: black;
+	width: 2rem;
+	display: inline-block;
+	text-align: center;
+	.box-sizing(border-box);
 }
