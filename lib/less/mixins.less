@@ -1,0 +1,15 @@
+.box-sizing(@value) {
+	-webkit-box-sizing: @value;
+	-moz-box-sizing: @value;
+	-ms-box-sizing: @value;
+	box-sizing: @value;
+}
+
+.box-shadow(@value) {
+	-webkit-box-shadow: @value;
+	-moz-box-shadow: @value;
+	box-shadow: @value;
+
+	/* IE9 or later needs `border-collapse: separate` for box-shadow to work. */
+	border-collapse: separate;
+}

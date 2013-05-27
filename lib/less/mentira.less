@@ -1,4 +1,5 @@
 @import "variables.less";
+@import "mixins.less";
 
 body {
 	font-family: sans-serif;
@@ -19,8 +20,12 @@ a {
 
 #bar {
 	background-color: #788942;
-	padding: 0.8rem @pagePadding;
-	height: 1.4rem;
+	padding: @barPadding @pagePadding;
+	height: @barHeight;
+	position: fixed;
+	width: 100%;
+	.box-sizing(border-box);
+	.box-shadow(0 0 5px 5px #ccc);
 }
 
 #bar-brand {
@@ -83,7 +88,11 @@ iframe.tw {
 }
 
 .module {
-	padding: 0.8rem @pagePadding;
+	padding: @moduleHeightPadding @pagePadding;
+}
+
+.module:first-of-type {
+	padding-top: @moduleHeightPadding + @barHeight;
 }
 
 .module h2,
@@ -99,8 +108,8 @@ iframe.tw {
 .module h2 {
 	width: 50%;
 	float: left;
-	box-sizing: border-box;
 	padding-right: 1em;
+	.box-sizing(border-box);
 }
 
 .module h2::first-line {
