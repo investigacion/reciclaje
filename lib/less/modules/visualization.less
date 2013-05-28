@@ -163,3 +163,20 @@
 	pointer-events: none;
 	.box-sizing(border-box);
 }
+
+#viz.selected-map .nav-item.map,
+#viz.selected-graph .nav-item.graph {
+	color: inherit;
+}
+
+#viz.selected-map #viz-graph-blurb,
+#viz.selected-graph #viz-map-blurb {
+	opacity: 0;
+	height: 0;
+	overflow: hidden;
+}
+
+#viz .blurb {
+	opacity: 1;
+	.transition(opacity, 0.5s);
+}
