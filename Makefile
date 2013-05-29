@@ -61,7 +61,10 @@ ${MENTIRA_JS_PUB}: ${CRI_TOPO_JSON} ${CRI_GARBAGE_JSON} lib/js/*.js lib/js/contr
 	if [ ! -d `dirname ${MENTIRA_JS_PUB}` ]; then \
 		mkdir `dirname ${MENTIRA_JS_PUB}`; \
 	fi;
-	./node_modules/browserify/bin/cmd.js lib/js/mentira.js --outfile ${MENTIRA_JS_PUB}.tmp --require ./lib/js/mentira.js
+	./node_modules/browserify/bin/cmd.js \
+		lib/js/mentira.js \
+		--outfile ${MENTIRA_JS_PUB}.tmp \
+		--require ./lib/js/mentira.js
 	if [[ ${ENV} == "live" ]]; then \
 		./node_modules/uglify-js/bin/uglifyjs \
 			${MENTIRA_JS_PUB}.tmp \
