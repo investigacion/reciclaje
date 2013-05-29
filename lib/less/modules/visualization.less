@@ -215,7 +215,8 @@
 	cursor: pointer;
 }
 
-#viz-graph-general-table td.canton:hover {
+#viz-graph-general-table td.canton:hover,
+#viz-graph-general-table td.canton.selected {
 	background-color: @brandBackground;
 }
 
@@ -266,10 +267,24 @@
 
 #viz-graph-box {
 	position: absolute;
-	top: -7rem;
+	top: -8rem;
+	left: -14rem;
 	background-color: #d3d4ce;
 	padding: 1rem;
 	width: 14rem;
+}
+
+#viz-graph-box:after {
+	width: 0;
+	height: 0;
+	content: '';
+	display: block;
+	border-style: solid;
+	border-width: 20px 5px 0 5px;
+	border-color: #d3d4ce transparent transparent transparent;
+	position: absolute;
+	bottom: -20px;
+	right: 1.4rem;
 }
 
 #viz-graph-box .title {
