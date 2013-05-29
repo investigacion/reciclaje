@@ -50,7 +50,6 @@ ${CRI_TOPO_JSON}: node_modules ${CRI_JSON}
 		-e lib/data/costarica-codes.csv \
 		--id-property=+ID_2 \
 		-p code=+code \
-		-p name=NAME_2 \
 		-q 1e4 \
 		-o ${CRI_TOPO_JSON} \
 		${CRI_JSON}
