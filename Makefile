@@ -51,7 +51,6 @@ ${CRI_TOPO_JSON}: node_modules ${CRI_JSON}
 		--id-property=+ID_2 \
 		-p code=+code \
 		-p name=NAME_2 \
-		-p province=NAME_1 \
 		-q 1e4 \
 		-o ${CRI_TOPO_JSON} \
 		${CRI_JSON}
