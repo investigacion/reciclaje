@@ -1,4 +1,4 @@
-PROVINCIA,COD PROVINCIA,Gran Área Metropo.,ID,Cantón,Total toneladas de residuos por mes,Toneladas de residuos valorizables por mes,Porcentaje de valorizables del total,Recoge residuos por separado (total o parcialmente en el cantón),Tiene programas de reciclaje al menos 1 vez al mes,Porcentaje de hogares que separan
+PROVINCIA,COD PROVINCIA,Gran Área Metropo.,ID,Cantón,Total toneladas de residuos por mes,Toneladas de residuos valorizables por mes,Porcentaje de valorizables del total,Recoge residuos por separado en casas (total o parcialmente en el cantón),Tiene programas de reciclaje al menos 1 vez al mes,Porcentaje de hogares que separan
 Guanacaste,5,2,507,Abangares,168,5,3%,SÍ,SÍ,27%
 San José,1,2,112,Acosta,130,40,31%,SÍ,SÍ,49%
 Puntarenas,6,2,606,Aguirre,nd,nd,nd,nd,nd,36%
@@ -16,8 +16,8 @@ Guanacaste,5,2,505,Carrillo,789,182,23%,NO,si,34%
 Cartago,3,1,301,Cartago,2568,0,0%,NO,SÍ,39%
 Puntarenas,6,2,610,Corredores,720,44,6%,NO,SÍ,39%
 Puntarenas,6,2,608,Coto Brus,280,11,4%,NO,SÍ,35%
-San José,1,1,118,Curridabat,1766,100,6%,SÍ,SÍ,52%
-San José,1,1,103,Desamparados,4300,100,2%,SÍ,SÍ,47%
+San José,1,1,118,Curridabat,1666,100,6%,SÍ,SÍ,52%
+San José,1,1,103,Desamparados,4200,100,2%,SÍ,SÍ,47%
 San José,1,2,117,Dota,40,18,45%,SÍ,SÍ,76%
 Cartago,3,1,308,El Guarco,nd,nd,nd,nd,nd,35%
 San José,1,1,102,Escazú,1952,97,5%,SÍ,SÍ,64%
@@ -30,7 +30,7 @@ Alajuela,2,1,203,Grecia,1250,5,0%,NO,SÍ,42%
 Limón,7,2,706,Guácimo,nd,nd,nd,nd,nd,42%
 Alajuela,2,2,215,Guatuso,132,0,0%,NO,SÍ,40%
 Heredia,4,1,401,Heredia,3200,12,0%,NO,SÍ,45%
-Guanacaste,5,2,511,Hojancha,nd,nd,nd,nd,nd,55%
+Guanacaste,5,2,511,Hojancha,40,nd,nd,nd,sí,55%
 Cartago,3,2,304,Jiménez,52,32,62%,SÍ,SÍ,67%
 Guanacaste,5,2,510,La Cruz,300,0,0%,NO,no,24%
 Cartago,3,1,303,La Unión,1920,0,0%,SÍ,SÍ,38%
@@ -51,7 +51,7 @@ Alajuela,2,2,209,Orotina,336,0,0%,NO,SÍ,25%
 Puntarenas,6,2,605,Osa,200,20,10%,SÍ,SÍ,34%
 Alajuela,2,1,207,Palmares,700,3,0%,NO,SÍ,34%
 Cartago,3,1,302,Paraíso,1000,2.5,0%,SÍ,SÍ,32%
-Puntarenas,6,2,609,Parrita,nd,nd,nd,nd,nd,29%
+Puntarenas,6,2,609,Parrita,264,"0,6",nd,nd,nd,29%
 San José,1,2,119,Pérez Zeledón,1080,36,3%,SÍ,Sí,48%
 Alajuela,2,1,208,Poás,465,6,1%,SÍ,SÍ,34%
 Limón,7,2,702,Pococí,nd,nd,nd,nd,nd,49%
