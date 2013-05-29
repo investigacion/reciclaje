@@ -135,8 +135,25 @@
 	.box-sizing(border-box);
 }
 
-#viz-graph-menu .nav-item.selected {
+#viz-graph.general-selected .nav-item.general,
+#viz-graph.canton-selected .nav-item.canton {
 	background-color: @brandBackground;
+}
+
+#viz-graph-general,
+#viz-graph-canton {
+	position: absolute;
+	opacity: 0;
+	.transition(opacity, 0.25s);
+}
+
+#viz-graph.general-selected #viz-graph-general,
+#viz-graph.canton-selected #viz-graph-canton {
+	opacity: 1;
+}
+
+#viz-graph-canton {
+	background: pink;
 }
 
 #viz-graph-select {
