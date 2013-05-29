@@ -17,7 +17,7 @@
 }
 
 #viz-graph {
-	background: rgba(0, 255, 0, 0.5);
+	/* background: rgba(0, 255, 0, 0.5); */
 	.translate-x(100%);
 }
 
@@ -187,4 +187,110 @@
 #viz .blurb {
 	opacity: 1;
 	.transition(opacity, 0.5s);
+}
+
+#viz-graph-general-table {
+	table-layout: fixed;
+	border-collapse: separate;
+	border-spacing: 1px 2rem;
+	margin: 2rem;
+}
+
+#viz-graph-general-table td {
+	 .box-sizing(border-box);
+}
+
+#viz-graph-general-table td.category {
+	width: 19%;
+	height: 3rem;
+	padding-right: 1rem;
+	font-family: serif;
+	font-size: 1rem;
+	color: #636363;
+}
+
+#viz-graph-general-table td.canton {
+	width: 1%;
+	background-color: #d2d2d2;
+	cursor: pointer;
+}
+
+#viz-graph-general-table td.canton:hover {
+	background-color: @brandBackground;
+}
+
+#viz-graph-general-table tr:first-of-type td.canton > span {
+	position: relative;
+}
+
+#viz-graph-general-table tr:first-of-type td.canton > span:after {
+	position: absolute;
+	top: 2.35rem;
+	left: 4px;
+	content: '';
+	display: inline-block;
+	width: 1px;
+	height: 1px;
+	background-color: #636363;
+}
+
+#viz-graph-general-table tr:first-of-type td.canton.first > span:after,
+#viz-graph-general-table tr:first-of-type td.canton.last > span:after {
+	font-family: serif;
+	color: #636363;
+	font-size: 0.9rem;
+	background: none;
+	top: 2.4rem;
+	line-height: 0;
+}
+
+#viz-graph-general-table tr:first-of-type td.canton.first > span:after {
+	content: '81';
+	left: -4px;
+}
+
+#viz-graph-general-table tr:first-of-type td.canton.last > span:after {
+	content: '▸ 1°';
+	font-weight: bold;
+	color: black;
+	white-space: nowrap;
+	left: -0.6rem;
+}
+
+#viz-graph-general-table td > span {
+	height: 0;
+	width: 0;
+	display: block;
+	color: transparent;
+}
+
+#viz-graph-box {
+	position: absolute;
+	top: -7rem;
+	background-color: #d3d4ce;
+	padding: 1rem;
+	width: 14rem;
+}
+
+#viz-graph-box .title {
+	color: @brandBackground;
+	text-transform: uppercase;
+	font-weight: bold;
+	display: inline-block;
+	width: 50%;
+	vertical-align: top;
+}
+
+#viz-graph-box .ranking {
+	color: #636363;
+	font-family: serif;
+	display: inline-block;
+	width: 45%;
+	margin-right: 5%;
+}
+
+#viz-graph-box .position {
+	color: black;
+	font-weight: bold;
+	font-size: 1.4rem;
 }
