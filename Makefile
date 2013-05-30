@@ -90,6 +90,10 @@ ${MENTIRA_CSS_PUB}: lib/less/*.less lib/less/modules/*.less
 	./node_modules/recess/bin/recess \
 		--compress lib/less/mentira.less > ${MENTIRA_CSS_PUB}
 
+publish: clean
+	@make ENV=live
+	@./publish
+
 clean:
 	rm -rf build/CRI_adm \
 		${CRI_JSON} \
@@ -101,4 +105,4 @@ clean:
 clean-vendor:
 	rm -rf node_modules
 
-.PHONY: public clean clean-vendor
+.PHONY: public publish clean clean-vendor
