@@ -123,8 +123,8 @@
 	.box-sizing(border-box);
 }
 
-#viz-graph.general-selected .nav-item.general,
-#viz-graph.canton-selected .nav-item.canton {
+#viz.general-selected .nav-item.general,
+#viz.canton-selected .nav-item.canton {
 	background-color: @brandBackground;
 }
 
@@ -137,8 +137,8 @@
 	.transition(opacity, 0.25s);
 }
 
-#viz-graph.general-selected #viz-graph-general,
-#viz-graph.canton-selected #viz-graph-canton {
+#viz.general-selected #viz-graph-general,
+#viz.canton-selected #viz-graph-canton {
 	opacity: 1;
 	pointer-events: auto;
 }
@@ -182,7 +182,10 @@
 }
 
 #viz.selected-map #viz-graph-blurb,
-#viz.selected-graph #viz-map-blurb {
+#viz.selected-graph #viz-map-blurb,
+#viz.selected-map #viz-graph-blurb-canton,
+#viz.selected-graph.canton-selected #viz-graph-blurb,
+#viz.selected-graph.general-selected #viz-graph-blurb-canton {
 	opacity: 0;
 	height: 0;
 	visibility: hidden;
