@@ -34,7 +34,12 @@
 	display: block;
 	margin: 0 auto;
 	margin-top: 0;
-	.transition(margin-top, 0.25s);
+	-webkit-transition-property: margin-top, -webkit-transform;
+	-moz-transition-property: margin-top, -moz-transform;
+	-ms-transition-property: margin-top, -ms-tranform;
+	-o-transition-property: margin-top, -o-transform;
+	transition-property: transform;
+	.transition-duration(0.25s);
 }
 
 #viz-map-svg .canton {
@@ -194,6 +199,13 @@
 #viz .blurb {
 	opacity: 1;
 	.transition(opacity, 0.5s);
+}
+
+#viz-map-blurb {
+
+	/* If the bottom of the map bleeds downwards, let it bleed under the blurb instead of over it. */
+	position: relative;
+	background: rgba(255, 255, 255, 0.6);
 }
 
 #viz-graph-general-table {
