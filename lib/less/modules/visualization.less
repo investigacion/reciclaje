@@ -53,11 +53,12 @@
 	.transition(transform, 0.25s);
 }
 
-#viz-map-tip .close {
+.close {
 	cursor: pointer;
 }
 
-#viz-map-tip .close:before {
+#viz-map-tip .close:before,
+#viz-graph-box .close:before {
 	content: '×';
 	color: #6a7840;
 	background-color: white;
