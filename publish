@@ -1,5 +1,5 @@
 #!/bin/sh
 
 lftp \
-	-e "set ftp:list-options -a; set mirror:exclude-regex \.DS_Store$; mirror --verbose=3 -R ./public /2013/Mentira; bye" \
+	-e "set ftp:list-options -a; set mirror:exclude-regex \.DS_Store$; mirror --verbose=3 -R ./public /2013/MedioAmbiente; bye" \
 	-u lninves media.nacion.com
