@@ -9,6 +9,7 @@
 	width: 100%;
 	position: absolute;
 	.transition(transform, 0.5s);
+	.box-sizing(border-box);
 }
 
 #viz-map {
@@ -137,9 +138,11 @@
 #viz-graph-canton {
 	position: absolute;
 	width: 100%;
+	left: 0;
 	opacity: 0;
 	pointer-events: none;
 	.transition(opacity, 0.25s);
+	.box-sizing(border-box);
 }
 
 #viz.general-selected #viz-graph-general,
