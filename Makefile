@@ -80,6 +80,7 @@ ${MENTIRA_JS_PUB}: ${CRI_TOPO_JSON} ${CRI_GARBAGE_JSON} ${CRI_INDICES_JSON} lib/
 	cat \
 		lib/js/vendor/d3.v3.min.js \
 		lib/js/vendor/topojson.v1.min.js \
+		lib/js/vendor/classList.min.js \
 		${MENTIRA_JS_PUB}.tmp > ${MENTIRA_JS_PUB}
 	rm ${MENTIRA_JS_PUB}.tmp
 
