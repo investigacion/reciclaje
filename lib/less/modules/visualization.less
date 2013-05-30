@@ -17,7 +17,9 @@
 }
 
 #viz-graph {
-	/* background: rgba(0, 255, 0, 0.5); */
+
+	/* Hide the map bleeding under this layer on small screens with a white background. */
+	background-color: white;
 	.translate-x(100%);
 }
 
@@ -219,11 +221,14 @@
 
 #viz-graph-general-table td.category {
 	width: 19%;
-	height: 3rem;
 	padding-right: 1rem;
 	font-family: serif;
 	font-size: 1rem;
 	color: #636363;
+}
+
+#viz-graph-general-table td.category > div {
+	height: 3rem;
 }
 
 #viz-graph-general-table td.canton {
