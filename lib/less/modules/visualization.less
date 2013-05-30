@@ -1,6 +1,6 @@
 .vizs {
 	margin: 1rem 0;
-	height: 500px;
+	height: 400px;
 	width: 100%;
 	position: relative;
 }
@@ -144,12 +144,14 @@
 #viz-graph-canton {
 	position: absolute;
 	opacity: 0;
+	pointer-events: none;
 	.transition(opacity, 0.25s);
 }
 
 #viz-graph.general-selected #viz-graph-general,
 #viz-graph.canton-selected #viz-graph-canton {
 	opacity: 1;
+	pointer-events: auto;
 }
 
 #viz-graph-select {
@@ -326,11 +328,12 @@
 #viz-graph-canton {
 	height: 100%;
 	width: 100%;
+	text-align: center;
 }
 
 #viz-graph-canton .stat {
-	width: 18%;
-	margin: 1rem 0.5%;
+	width: 14%;
+	margin: 1rem 2%;
 	display: inline-block;
 	vertical-align: top;
 }
@@ -339,6 +342,7 @@
 	font-family: serif;
 	color: #7d7d7d;
 	font-size: 0.9rem;
+	text-align: left;
 }
 
 #viz-graph-canton .tube {
@@ -350,7 +354,7 @@
 }
 
 #viz-graph-canton .mercury {
-	height: 10rem;
+	height: 0;
 	width: 2rem;
 	position: absolute;
 	bottom: 0;
@@ -359,4 +363,16 @@
 	border-width: 2px;
 	background-color: @brandBackground;
 	.box-sizing(border-box);
+	.transition(height, 0.25s);
+}
+
+#viz-graph-canton .mercury:after {
+	content: attr(data-percentage);
+	color: @brandBackground;
+	font-family: serif;
+	font-weight: bold;
+	font-size: 1.2rem;
+	margin-left: 2.4rem;
+	margin-top: -0.5em;
+	display: block;
 }

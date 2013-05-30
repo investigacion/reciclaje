@@ -8,6 +8,9 @@ CRI_TOPO_JSON=build/costarica-topo.json
 CRI_GARBAGE_CSV=lib/data/costarica-garbage.csv
 CRI_GARBAGE_JSON=build/costarica-garbage.json
 
+CRI_INDICES_CSV=lib/data/costarica-indices.csv
+CRI_INDICES_JSON=build/costarica-indices.json
+
 MENTIRA_JS_PUB=public/js/mentira.js
 MENTIRA_CSS_PUB=public/css/mentira.css
 
@@ -57,7 +60,10 @@ ${CRI_TOPO_JSON}: node_modules ${CRI_JSON}
 ${CRI_GARBAGE_JSON}: ${CRI_GARBAGE_CSV} lib/scripts/garbage2json.js
 	node lib/scripts/garbage2json.js > ${CRI_GARBAGE_JSON}
 
-${MENTIRA_JS_PUB}: ${CRI_TOPO_JSON} ${CRI_GARBAGE_JSON} lib/js/*.js lib/js/controllers/*.js lib/js/vendor/*.js
+${CRI_INDICES_JSON}: ${CRI_INDICES_CSV} lib/scripts/indices2json.js
+	node lib/scripts/indices2json.js > ${CRI_INDICES_JSON}
+
+${MENTIRA_JS_PUB}: ${CRI_TOPO_JSON} ${CRI_GARBAGE_JSON} ${CRI_INDICES_JSON} lib/js/*.js lib/js/controllers/*.js lib/js/vendor/*.js
 	if [ ! -d `dirname ${MENTIRA_JS_PUB}` ]; then \
 		mkdir `dirname ${MENTIRA_JS_PUB}`; \
 	fi;
