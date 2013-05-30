@@ -285,16 +285,16 @@
 }
 
 #viz-graph-general-table tr:first-of-type td.canton.first > span:after {
-	content: attr(data-position);
-	left: -4px;
-}
-
-#viz-graph-general-table tr:first-of-type td.canton.last > span:after {
-	content: '▸ 1°';
+	content: '1° ▸';
 	font-weight: bold;
 	color: black;
 	white-space: nowrap;
 	left: -0.6rem;
+}
+
+#viz-graph-general-table tr:first-of-type td.canton.last > span:after {
+	content: attr(data-position);
+	left: -4px;
 }
 
 #viz-graph-general-table td > span {
