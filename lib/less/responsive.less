@@ -1,0 +1,47 @@
+@media (max-width: 800px) {
+
+	/* Hide stuff on small or medium size screens. */
+	#bar-social,
+	#bar-menu {
+		display: none;
+	}
+
+	#bar {
+		padding: @barPadding @smallPagePadding;
+	}
+
+	.module {
+		margin: 0 @smallPagePadding;
+	}
+
+	.vizs {
+		height: 300px;
+	}
+}
+
+@media (max-width: 640px) {
+
+	/* Title should appear above blurb instead of side-by-side on small screens. */
+	.module h2 {
+		float: none;
+		width: auto;
+		max-width: inherit;
+	}
+
+	.module .blurb {
+		float: none;
+		width: auto;
+	}
+}
+
+@media (min-width: 800px) {
+
+	/* Map should bleed into the title line on large screens, just for effect. */
+	#viz-map-svg {
+		margin-top: -4rem;
+	}
+
+	#viz-map-svg .canton:hover {
+		opacity: 0.8;
+	}
+}
