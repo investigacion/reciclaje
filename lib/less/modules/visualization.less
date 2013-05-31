@@ -322,7 +322,9 @@
 }
 
 #viz-graph-general-table tr:first-of-type td.canton.first > span:after {
-	content: '1° ▸';
+
+	/* Ideally we'd use the small black right-pointing triangle, but Android doesn't support it. */
+	content: '1° ▶';
 	font-weight: bold;
 	color: black;
 	white-space: nowrap;
