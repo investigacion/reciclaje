@@ -12,6 +12,12 @@
 	.box-sizing(border-box);
 }
 
+#viz.selected-graph #vizs .viz {
+
+	/* Android browser hack: without forcing hardware acceleration, the fixed-positio bar will disappear on transition end. */
+	-webkit-transform-style: preserve-3d;
+}
+
 #viz-map {
 	.translate-x(0);
 }
