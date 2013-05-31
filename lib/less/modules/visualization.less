@@ -396,6 +396,25 @@
 	.transition(height, 0.25s);
 }
 
+#viz-graph-canton .median {
+	height: 1px;
+	border-bottom: 1px dotted #333;
+	left: -30%;
+	position: absolute;
+	width: 150%;
+	z-index: 1;
+}
+
+#viz-graph-canton .median:before {
+	content: attr(data-median);
+	position: absolute;
+	left: -4rem;
+	font-size: 0.8rem;
+	font-family: serif;
+	top: -0.5em;
+	width: 4rem;
+}
+
 #viz-graph-canton .mercury:after {
 	content: attr(data-percentage);
 	color: @brandBackground;
