@@ -1,7 +1,7 @@
 {
-	"name": "mentira",
+	"name": "reciclaje",
+	"private": true,
 	"version": "0.0.1",
-	"description": "La gran mentira verde.",
 	"dependencies": {
 		"domready": "0.x",
 		"css3-translate": "0.x",
@@ -13,16 +13,5 @@
 		"uglify-js": "2.x",
 		"topojson": "1.x",
 		"dsv": "0.x"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git://github.com/nacion/mentira.git"
-	},
-	"contributors": [
-		{
-			"name": "Matthew Caruana Galizia",
-			"email": "m@m.cg"
-		}
-	]
-
+	}
 }

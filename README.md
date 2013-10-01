@@ -1,4 +1,8 @@
-# Mentira verde + reciclaje #
+# Reciclaje #
+
+Recycling "special" for La Nación. Also a development workflow experiment.
+
+If you're interested in the data behind this project, see the [reciclaje-data](https://github.com/investigacion/reciclaje-data) project.
 
 ## Building ##
 
@@ -8,7 +12,7 @@ Run `make` to build public resources. If you want the resources to be built auto
 
 ## Publishing ##
 
-Run `make publish` to publish directly to `media.nacion.com`. The `publish` task will build minified JavaScript and CSS before publishing. To build the pre-publish assets without actually publishing to the host run `make ENV=live`.
+Run `make publish` to publish directly to GitHub pages. The `publish` task will build minified Javascript and CSS before publishing.
 
 ## Might be useful ##
 
@@ -17,3 +21,9 @@ Run `make publish` to publish directly to `media.nacion.com`. The `publish` task
 - [Maps Tutorial](http://www.schneidy.com/Tutorials/MapsTutorial.html)
 - [Choropleth](http://bl.ocks.org/mbostock/4060606)
 - [Grouped Bar Chart](http://bl.ocks.org/mbostock/3887051)
+
+## Credits and license ##
+
+Developed by [Matthew Caruana Galizia](https://twitter.com/mcaruanagalizia) at [La Nación](http://www.nacion.com/).
+
+Code licensed under an MIT-style license.

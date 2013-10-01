@@ -1,5 +1,4 @@
 .DS_Store
 node_modules/
 build/
-public/js/
-public/css/
+gh-pages/
