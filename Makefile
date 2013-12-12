@@ -24,7 +24,7 @@ build:
 	fi;
 
 ${GADM_CRI_ZIP}: build
-	curl http://gadm.org/data/shp/CRI_adm.zip \
+	curl http://biogeo.ucdavis.edu/data/gadm2/shp/CRI_adm.zip \
 		--output $@ \
 		--time-cond $@ \
 		--progress-bar \
@@ -110,7 +110,7 @@ publish: pages
 
 clean:
 	if [ -d gh-pages ]; then \
-		cd gh-pages && git reset --hard && git clean -df
+		cd gh-pages && git reset --hard && git clean -df; \
 	fi;
 
 clean-vendor:
